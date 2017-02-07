@@ -35,28 +35,36 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
   /*height: 100vh; /* типа 100% (visual height)
   flex-wrap: wrap; /* default nowrap определяет перенос пропорционально размеру окна
   flex-direction: column;; /*определяет положение главной оси(main axis) row слева-направо column сверху-вниз*/
-  /*justify-content:space-around; /* способо сгруппировать элементы в различными способами либо пропорционально разделить пустотами */
+  /*justify-content:space-around; /* способо сгруппировать элементы в различными способами либо пропорционально разделить пустотами работает с mail axis*/
   height: 100vh;
-  align-items: center; /* выравнивает содержимое flex контейнеров по линии*/
-  flex-direction: column;
+  /*align-items: center; /* выравнивает содержимое flex контейнеров по линии*/
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /*align-content: center; /* работает с cross axis*/
+  align-items: flex-start;
 }
 
 .box {
-    font-size: 30px
+    width: 33.3333%;
     /* flex: 1; создает 1 ряд равномерно распределенных по ширине */
 }
-.box2 { /* по умолчанию все флекс-элементы имеют порядок номер 0 при любом увеличении порядка этот элемент добавляется в    конец очереди
-  order: 1;*/
-  font-size: 50px;
+.box2 { /* по умолчанию все флекс-элементы имеют порядок номер 0 при любом увеличении порядка этот элемент добавляется в    конец очереди*/
+  /*order: 1;
+  font-size: 50px;*/
+  padding-bottom: 200px;
+  flex-grow: 1;
 }
-.box3 {
-  font-size: 100px;
+.box6 {
+  /*font-size: 100px;*/
+  padding-bottom: 0px;
 }
 
-.box4 {
-  font-size: 150px;
+.box9 {
+  /*font-size: 150px;*/
+  padding-bottom: 50px;
+  align-self: flex-end; /* перезаписывает свойство контейнера блоков*/
 }
 
 .box10 {
-  font-size: 77px;
+  /*font-size: 77px;*/
 }
